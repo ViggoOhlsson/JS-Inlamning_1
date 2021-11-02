@@ -108,6 +108,7 @@
     "glogg": "^1.0.2",
     "graceful-fs": "^4.2.8",
     "gulp-cli": "^2.3.0",
+    "gulp-minify": "^3.1.0",
     "gulplog": "^1.0.0",
     "has": "^1.0.3",
     "has-symbols": "^1.0.2",

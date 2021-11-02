@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/main.js"></script>
 </head>
@@ -12,37 +13,49 @@
     <header>
         <div class="header-container">
             <span class="site-title">Viggos To-Do List</span>
+            <span id="watch" class="watch"></span>
         </div>
     </header>
     <main>
         <div class="list-wrapper">
-            <ul id="list" class="list">
+            <h2>Current Tasks</h2>
+            <ul id="active-list" class="active-list list">
                 <li class="list-row">
-                    <input class="todo-checkbox" type="checkbox"/>
+                    <button class="todo-button"><i class="fa fa-check"></i></button>
                     <span class="todo-title">Bädda Sängen</span>
                     <span class="todo-started">Started At <span>29-10-2021 | 10.27</span></span>
                     <span class="todo-finishby">Finish By <span>29-10-2021 | 15.00</span></span>
-                    <span class="todo-prio">Priority <span class="prio-1">1</span></span>
+                    <span class="todo-prio">Priority <span class="prio-1">Top</span></span>
                 </li>
                 <li class="list-row">
-                    <input class="todo-checkbox" type="checkbox"/>
-                    <span class="todo-title">Gör en grej</span>
+                    <button class="todo-button"><i class="fa fa-check"></i></button>
+                    <span class="todo-title">Bädda Sängen</span>
                     <span class="todo-started">Started At <span>29-10-2021 | 10.27</span></span>
                     <span class="todo-finishby">Finish By <span>29-10-2021 | 15.00</span></span>
-                    <span class="todo-prio">Priority <span class="prio-2">2</span></span>
+                    <span class="todo-prio">Priority <span class="prio-2">Mid</span></span>
                 </li>
                 <li class="list-row">
-                    <input class="todo-checkbox" type="checkbox"/>
-                    <span class="todo-title">Gör en till grej</span>
+                    <button class="todo-button"><i class="fa fa-check"></i></button>
+                    <span class="todo-title">Bädda Sängen</span>
                     <span class="todo-started">Started At <span>29-10-2021 | 10.27</span></span>
                     <span class="todo-finishby">Finish By <span>29-10-2021 | 15.00</span></span>
-                    <span class="todo-prio">Priority <span class="prio-3">3</span></span>
+                    <span class="todo-prio">Priority <span class="prio-3">Low</span></span>
+                </li>
+            </ul>
+            <h2>Completed Tasks</h2>
+            <ul id="finished-list" class="finished-list list">
+                <li class="list-row">
+                    <button class="todo-button"><i class="fa fa-check"></i></button>
+                    <span class="todo-title">Bädda Sängen</span>
+                    <span class="todo-finishby">Finished At <span>29-10-2021 | 15.00</span></span>
                 </li>
             </ul>
         </div>
     </main>
     <footer>
-
+        <div class="footer-content">
+            <button><i class="fa fa-close"></i> Clear Tasks</button>
+        </div>
     </footer>
 </body>
 </html>

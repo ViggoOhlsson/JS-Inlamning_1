@@ -20,10 +20,14 @@ header {
 .header-container {
   grid-column: 2/3;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: space-between; }
 
 .site-title {
-  font-size: 2rem; }
+  font-size: 2em; }
+
+.watch {
+  font-size: 1.5em; }
 
 main {
   overflow: auto;
@@ -40,33 +44,53 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px; }
+  .list .list-row {
+    padding: 10px 20px 10px 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 5px;
+    cursor: default; }
+    .list .list-row:hover {
+      background-color: rgba(0, 0, 0, 0.3); }
+    .list .list-row .todo-button {
+      padding: 5px 20px;
+      background: #85ca65;
+      border-radius: 3px;
+      font-size: 1.4em;
+      color: lightgrey;
+      cursor: pointer;
+      border: none;
+      height: 100%;
+      transition: color 0.2s; }
+      .list .list-row .todo-button:hover {
+        background: #69a050; }
+    .list .list-row .todo-title {
+      flex-grow: 1; }
+    .list .list-row .todo-started span {
+      color: darkgrey; }
+    .list .list-row .todo-finishby span {
+      margin-left: 5px;
+      color: darkgrey; }
+    .list .list-row .todo-prio span {
+      margin-left: 5px;
+      font-size: 1.2rem;
+      font-weight: bold; }
 
-.list-row {
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  border-radius: 5px; }
-  .list-row .todo-button {
-    background-color: #993a3a;
-    cursor: pointer;
-    border: none;
-    height: 100%; }
-  .list-row .todo-title {
-    flex-grow: 1; }
-    .list-row .todo-title:hover {
-      color: salmon;
-      cursor: pointer; }
-  .list-row .todo-started span {
-    color: darkgrey; }
-  .list-row .todo-finishby span {
-    margin-left: 5px;
-    color: darkgrey; }
-  .list-row .todo-prio span {
-    margin-left: 5px;
-    font-size: 1.2rem;
-    font-weight: bold; }
+.active-list .list-row .todo-button {
+  background-color: rgba(255, 255, 255, 0.1); }
+  .active-list .list-row .todo-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); }
+
+.finished-list .list-row {
+  background-color: rgba(0, 0, 0, 0.3); }
+  .finished-list .list-row:hover {
+    background-color: rgba(0, 0, 0, 0.4); }
+  .finished-list .list-row .todo-button {
+    background: #85ca65; }
+    .finished-list .list-row .todo-button:hover {
+      background: #69a050; }
 
 .prio-1 {
   color: #ff6b6b; }
@@ -80,7 +104,28 @@ main {
 footer {
   height: 75px;
   grid-column: 1/4;
-  background-color: rgba(255, 255, 255, 0.1); }
+  background-color: rgba(255, 255, 255, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 60% 1fr; }
+
+.footer-content {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: flex-end; }
+  .footer-content button {
+    margin: 10px 0;
+    color: white;
+    background-color: #a12c2c;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0 10px; }
+    .footer-content button i {
+      font-size: 1.2em; }
+    .footer-content button:hover {
+      background-color: rgba(161, 44, 44, 0.8);
+      cursor: pointer; }
 
 /* width */
 ::-webkit-scrollbar {
